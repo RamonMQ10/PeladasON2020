@@ -14,9 +14,7 @@ Versões
 
 Frontend
 
-   axios: 0.20.0,
-   
-   bootstrap: 4.5.2,
+   axios: 0.20.0,<br/>bootstrap: 4.5.2,
    
    core-js: 3.6.5,
    
