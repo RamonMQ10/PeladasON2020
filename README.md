@@ -13,17 +13,28 @@ Orientações:
 Versões
 
 Frontend
-   axios: 0.20.0,\n
+
+   axios: 0.20.0,
+   
    bootstrap: 4.5.2,
+   
    core-js: 3.6.5,
+   
    vue": 2.6.11,
+   
    vue-moment: 4.1.0,
+   
    vue-router: 3.4.3,
+   
    vue-sweetalert2: 3.0.8
  
 
 Backend
+
   Springboot - 2.3.3
+  
   java version - 1.8
+  
   hibernate - 5.4.20
+  
   Postgres - 9.4
