@@ -13,7 +13,7 @@ Orientações:
 Versões
 
 Frontend
-   axios: 0.20.0,
+   axios: 0.20.0,\n
    bootstrap: 4.5.2,
    core-js: 3.6.5,
    vue": 2.6.11,
