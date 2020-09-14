@@ -3,8 +3,11 @@
 Orientações:
 
 1 - Criar um banco de dados com o nome "avaliacao" (Postgres)
+
 2 - Colocar os parâmetros do seu banco de dados no application.properties (Springboot)
+
 3 - Rodar os scripts de banco de dados do arquivo script.txt
+
 4 - Se certificar de rodar o projeto backend (portalpeladas.api) e o projeto frontend (frontvue) em portas diferentes
 
 Versões
