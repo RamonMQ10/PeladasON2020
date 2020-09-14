@@ -1,15 +1,15 @@
 # PeladasON2020
 
-Orientações:<br/>
+<b>Orientações</b><br/>
 
 1 - Criar um banco de dados com o nome "avaliacao" (Postgres)<br/>
 2 - Colocar os parâmetros do seu banco de dados no application.properties (Springboot)<br/>
 3 - Rodar os scripts de banco de dados do arquivo script.txt<br/>
 4 - Se certificar de rodar o projeto backend (portalpeladas.api) e o projeto frontend (frontvue) em portas diferentes<br/><br/>
 
-Versões<br/>
+<b>Versões</b><br/>
 
-<b>Fronten</b>d<br/>
+<b>Frontend</b><br/>
    axios: 0.20.0,<br/>
    bootstrap: 4.5.2,<br/>
    core-js: 3.6.5,<br/>
@@ -19,7 +19,7 @@ Versões<br/>
    vue-sweetalert2: 3.0.8<br/><br/>
  
 
-Backend<br/>
+<b>Backend</b><br/>
   Springboot - 2.3.3<br/>
   java version - 1.8<br/>
   hibernate - 5.4.20<br/>
