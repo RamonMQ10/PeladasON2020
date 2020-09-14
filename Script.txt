@@ -1,0 +1,73 @@
+
+-- Table: public.usuario
+
+-- DROP TABLE public.usuario;
+
+CREATE TABLE public.usuario
+(
+    usuario_id Serial NOT NULL ,
+    nome_completo character varying(255) COLLATE pg_catalog."default",
+    apelido character varying(255) COLLATE pg_catalog."default",
+    email character varying(255) COLLATE pg_catalog."default" NOT NULL,
+    senha character varying(255) COLLATE pg_catalog."default",
+    CONSTRAINT usuario_pkey PRIMARY KEY (usuario_id, email),
+    CONSTRAINT usuario_usuarioid_key UNIQUE (usuario_id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.usuario
+    OWNER to postgres;
+
+
+
+-- Table: public.pelada
+
+-- DROP TABLE public.pelada;
+
+CREATE TABLE public.pelada
+(
+    pelada_id Serial NOT NULL,
+    nome_evento_esportivo text COLLATE pg_catalog."default",
+    data_evento date,
+    hora time without time zone,
+    local_evento text COLLATE pg_catalog."default",
+    CONSTRAINT pelada_pkey PRIMARY KEY (pelada_id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.pelada
+    OWNER to postgres;
+
+
+-- Table: public.pelada_usuario
+
+-- DROP TABLE public.pelada_usuario;
+
+CREATE TABLE public.pelada_usuario
+(
+    pelada_usuario_id Serial NOT NULL,
+    pelada_id integer,
+    usuario_id integer,
+    CONSTRAINT peladausuario_peladausuarioid_key UNIQUE (pelada_usuario_id),
+    CONSTRAINT peladausuario_peladaid_fkey FOREIGN KEY (pelada_id)
+        REFERENCES public.pelada (pelada_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION,
+    CONSTRAINT peladausuario_usuarioid_fkey FOREIGN KEY (usuario_id)
+        REFERENCES public.usuario (usuario_id) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.pelada_usuario
+    OWNER to postgres;
